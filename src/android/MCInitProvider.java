@@ -42,14 +42,14 @@ public class MCInitProvider
     extends ContentProvider implements MarketingCloudSdk.InitializationListener {
     @Override
     public boolean onCreate() {
-        Context ctx = getContext();
-        if (ctx != null) {
-            MarketingCloudConfig.Builder builder = MCSdkConfig.prepareConfigBuilder(ctx);
-            if (builder != null) {
-                builder.setUrlHandler(MCSdkListener.INSTANCE);
-                MarketingCloudSdk.init(ctx, builder.build(ctx), this);
-            }
-        }
+        // Context ctx = getContext();
+        // if (ctx != null) {
+        //     MarketingCloudConfig.Builder builder = MCSdkConfig.prepareConfigBuilder(ctx);
+        //     if (builder != null) {
+        //         builder.setUrlHandler(MCSdkListener.INSTANCE);
+        //         MarketingCloudSdk.init(ctx, builder.build(ctx), this);
+        //     }
+        // }
         return false;
     }
 
